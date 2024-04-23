@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Clear the body
-    document.body.innerHTML = '';
+    // Check if there are any <p> elements in the body
+    const existingParagraphs = document.querySelectorAll('p');
 
-    // Create a paragraph element
-    const paragraph = document.createElement("p");
+    // If no <p> elements exist, proceed to add the paragraph
+    if (existingParagraphs.length === 0) {
+        // Clear the body
+        document.body.innerHTML = '';
 
-    // Set the text of the paragraph to 'DOM load success'
-    paragraph.textContent = "DOM load success";
+        // Create a paragraph element
+        const paragraph = document.createElement("p");
 
-    // Append the paragraph to the body
-    document.body.appendChild(paragraph);
+        // Set the text of the paragraph to 'DOM load success'
+        paragraph.textContent = "DOM load success";
+
+        // Append the paragraph to the body
+        document.body.appendChild(paragraph);
+    }
 });
