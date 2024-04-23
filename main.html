@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DOM Load Example</title>
+    <meta charset="UTF-8">
+    <title>DOM Load</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            body.innerText = 'DOM load success';
+        });
+    </script>
 </head>
-<body>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.body.innerHTML = ''; // Clear the body
-
-      const paragraph = document.createElement('p'); // Create a paragraph element
-      paragraph.textContent = 'DOM load success'; // Set the text of the paragraph
-      document.body.appendChild(paragraph); // Append the paragraph to the body
-    });
-  </script>
-</body>
 </html>
