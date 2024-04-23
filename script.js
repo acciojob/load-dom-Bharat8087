@@ -1,12 +1,12 @@
-//your JS code here. If required.
 document.addEventListener("DOMContentLoaded", function() {
-    const paragraph = document.createElement("p");
-    paragraph.textContent = "DOM load success";
-    document.body.appendChild(paragraph);
-
-    while (document.body.firstChild !== paragraph) {
-        document.body.removeChild(document.body.firstChild);
+    if (document.body.children.length === 0) {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "DOM load success";
+        document.body.appendChild(paragraph);
+    } else {
+        document.body.innerHTML = '';
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "DOM load success";
+        document.body.appendChild(paragraph);
     }
 });
-
-
